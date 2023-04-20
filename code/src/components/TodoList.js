@@ -43,7 +43,7 @@ const TodoList = ({ selectedTab }) => {
                 <span>{singleTodo.content}</span>
                 <input type="checkbox" id={singleTodo.id} name="todos" onChange={() => dispatch(tasks.actions.handleCheck(singleTodo))} />
               </label>
-              <DeleteButton type="button" onClick={() => dispatch(tasks.actions.removeItem(singleTodo))}>Delete</DeleteButton>
+              <DeleteButton type="button" onClick={() => dispatch(tasks.actions.removeItem(singleTodo.id))}>Delete</DeleteButton>
             </StyledTodoRow>
           )
         })}
